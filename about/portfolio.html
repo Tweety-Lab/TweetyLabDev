@@ -1,99 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+    />
 
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <style>
-        body {
-            margin: 0;
-            margin-right: 700px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
-                         Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', 
-                         sans-serif;
-        }
+      html {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
 
-        code {
-            background-color: #f1f1f1;
-            padding: 4px;
-            border-radius: 2px;
-        }
+      body {
+        margin: 0;
+        margin-right: 700px;
+      }
 
-        pre code {
-            font-family: monospace;
-            padding: 8px;
-            border-radius: 4px;
-            border: 1px solid #ddd;
-            display: inline-block;
-            width: 100%;
-        }
+      code {
+        background-color: #f1f1f1;
+        padding: 4px;
+        border-radius: 2px;
+      }
 
-        h1, h2, h3, h4, h5, h6 {
-            color: #1b1b1b;
-        }
+      pre code {
+        font-family: monospace;
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        display: inline-block;
+        width: 100%;
+      }
 
-        table {
-            border-collapse: collapse;
-            margin: 1em 0;
-            font-size: 0.95em;
-            width: auto; /* Make table as wide as its content */
-            max-width: 100%;
-        }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: #1b1b1b;
+      }
 
-        table thead {
-            background-color: #f6f8fa;
-        }
+      table {
+        border-collapse: collapse;
+        margin: 1em 0;
+        font-size: 0.95em;
+        width: auto; /* Make table as wide as its content */
+        max-width: 100%;
+      }
 
-        table th, table td {
-            border: 1px solid #dfe2e5;
-            padding: 8px 12px;
-            text-align: left;
-        }
+      table thead {
+        background-color: #f6f8fa;
+      }
 
-        table tr:nth-child(even) {
-            background-color: #fafafa;
-        }
+      table th,
+      table td {
+        border: 1px solid #dfe2e5;
+        padding: 8px 12px;
+        text-align: left;
+      }
 
-        table th {
-            font-weight: 600;
-        }
-        
-        .current-page {
-            color: rgb(97, 97, 97);
-        }
+      table tr:nth-child(even) {
+        background-color: #fafafa;
+      }
 
-        .current-page span {
-            color: rgb(61, 61, 61);
-            font-weight: 500;
-        }
+      table th {
+        font-weight: 600;
+      }
 
-        /* Watermark */
-        .watermark {
-            margin-top: 100px;
-            color:#dbdbdb;
-            border-top: 1px solid #e9e9e9; /* Horizontal line */
-            padding-top: 0px;
-            width: 50%;
-        }
+      .current-page {
+        color: rgb(97, 97, 97);
+      }
 
-        .watermark a {
-            color: #9eb1c4;
-        }
+      .current-page span {
+        color: rgb(61, 61, 61);
+        font-weight: 500;
+      }
+
+      /* Watermark */
+      .watermark {
+        margin-top: 100px;
+        color: #dbdbdb;
+        font-size: 1rem;
+        border-top: 1px solid #e9e9e9; /* Horizontal line */
+        padding-top: 0px;
+        width: 100%; /* Take up whole footer path */
+      }
+
+      .watermark a {
+        color: #9eb1c4;
+      }
     </style>
     <script>
-        // Initialize highlight.js on page load
-        document.addEventListener("DOMContentLoaded", () => {
-          hljs.highlightAll();
-        });
-      </script>
-</head>
-<body>
+      // Initialize highlight.js on page load
+      document.addEventListener("DOMContentLoaded", () => {
+        hljs.highlightAll();
+      });
+    </script>
+  </head>
+  <body>
     <p class="current-page">Site / <span>Portfolio</span></p>
     <head>
     <style>
@@ -122,6 +134,11 @@
         .navbar li {
             padding: 0;
             margin: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar li:hover {
+            transform: translateX(5px);
         }
 
         .navbar li.nav__title {
@@ -149,15 +166,21 @@
     <div class="navbar">
         <ul><li class="nav__title">ABOUT<ul class="nav__list"><li class="nav__list-item"><a href="/index.html">Home</a></li><li class="nav__list-item"><a href="/about/portfolio.html">Portfolio</a></li></ul></li></ul>
     </div>
-</body>
-    <h1 id="portfolio">Portfolio</h1>
+</body> <h1 id="portfolio">Portfolio</h1>
 <h2 id="documentation-generator">Documentation Generator</h2>
 <p>A C# tool for compiling highly versatile, lightweight static websites from Markdown (<code>.md</code>) documentation. Ideal for Project documentation, blogs, wikis or basically any other text-based site. Includes utilities designed to make development as easy as possible like a local server, live updating, and Theme templates to maximise productivity. (This site was made with it!)</p>
+<h2 id="sourceio">SourceIO</h2>
+<p>A C# Library for cleanly reading various Valve File Formats. Parses binary formats, text-based formats aswell as formats that utilize both types of data.</p>
 
 
     
     <div class="watermark">
-        <p>Site Built with <a href="https://github.com/Tweety-Lab/DocumentationGenerator">Documentation Generator</a></p>
+      <p>
+        Site Built with
+        <a href="https://github.com/Tweety-Lab/DocumentationGenerator"
+          >Documentation&nbsp;Generator</a
+        >
+      </p>
     </div>
-</body>
+  </body>
 </html>
