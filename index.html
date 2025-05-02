@@ -56,6 +56,11 @@
         max-width: 100%;
       }
 
+
+      a {
+        color: #264d74;
+      }
+
       table thead {
         background-color: #f6f8fa;
       }
@@ -73,6 +78,10 @@
 
       table th {
         font-weight: 600;
+      }
+
+      ul li::marker {
+        color:#383838
       }
 
       .current-page {
@@ -141,7 +150,7 @@
             transform: translateX(5px);
         }
 
-        .navbar li.nav__title {
+        .navbar li.nav__title-item {
             color:rgb(255, 255, 255);
             font-weight: bold;
             font-size: 1em;
@@ -164,7 +173,7 @@
 </head>
 <body>
     <div class="navbar">
-        <ul><li class="nav__title">ABOUT<ul class="nav__list"><li class="nav__list-item"><a href="/index.html">Home</a></li><li class="nav__list-item"><a href="/about/portfolio.html">Portfolio</a></li></ul></li></ul>
+        <ul class="list nav__main-list collapsible__content"><li class="nav__title-item">ABOUT<ul class="list"><li class="nav__list-item"><a href="/index.html">Home</a></li><li class="nav__list-item"><a href="/about/portfolio.html">Portfolio</a></li></ul></li></ul>
     </div>
 </body> <h1 id="tweety-lab.dev">Tweety-Lab.dev</h1>
 <h2 id="intro">Intro</h2>
