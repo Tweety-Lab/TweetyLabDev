@@ -26,5 +26,5 @@ As of the time of writing, it includes the following features:
 - Custom GLSL Preprocessor for simple Shader manipulation
 - Source Engine's Input, Entity, Map IO, and File Systems all faithfully recreated in C#
 
-<img src="about/hammer-map.png" alt="VMF Rendered in Hammer" width="800"/>
-<img src="about/vmf-render-map.png" alt="VVMF Rendered in SourceRewrite" width="800"/>
+![VMF Rendered in Hammer](about/hammer-map.png)
+![VMF Rendered in SourceRewrite](about/vmf-render-map.png)
