@@ -1,7 +1,8 @@
 Name: TweetyLabDev
 Theme: Default
-DefaultPage: Default/Page.md
+DefaultPage: Introduction/About.md
 Categories:
-- CategoryName: Default
+- CategoryName: Introduction
   Files:
-  - Default/Page.md
+  - Introduction/About.md
+  - Introduction/Portfolio.md
