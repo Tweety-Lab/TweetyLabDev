@@ -10,6 +10,15 @@ A C# tool that allows users to turn markdown (`.md`) files into an entire websit
 - Modern default theme
 - Instant GitHub Pages deployment
 
+## TweetyLang
+You can check the source code out [here](https://github.com/TweetyLang/TweetyLang)
+
+A native programming language designed around the philosophy of tools that **Just Work**. It aims to bridge the gap between the developer experience of a high-level language like C# and the control of low-level languages like C. It's design was influenced by the 4 major pillars of Developer Experience, Portability, Memory Safety, and Language Interoperability.
+
+If you're interested in the design behind TweetyLang, **you can view the design specification** [here](https://tweetylang.github.io/Specification/)
+
+![TweetyLang Source Code](tweety-lang.png)
+
 ## Atlas
 You can check the source code out [here](https://github.com/Vista-Source/Atlas)
 
