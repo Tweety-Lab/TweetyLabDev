@@ -58,3 +58,10 @@ A C++ Library that heavily simplifies the process of running/embedding C# in a C
 Supports static methods, return values, arguments, class instances, and more.
 
 ![NetLeaf Code](netleaf.png)
+
+## Fractal
+You can check the game out [here](https://store.steampowered.com/app/3484790/Fractal)
+
+Currently working alongside the many talented people at Team Sawblade to bring this puzzle game about lasers to life. Mainly responsible for refactoring old code, writing the level editor, and implementing new gameplay features using C# and the Unity Game Engine.
+
+![Fractal Screenshot](fractal.png)
