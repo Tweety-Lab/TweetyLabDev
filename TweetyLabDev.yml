@@ -1,7 +1,10 @@
 Name: TweetyLabDev
-Summary: Programmer with a focus on creating tools, engines, and libraries that simplify development and expand what's known as possible.
+Summary: Programmer with a focus on creating tools, engines, and libraries that simplify development and remove limitations.
 Theme: Default
 DefaultPage: Introduction/About.md
+DeployTargets:
+- www.tweety-lab.dev
+- tweety-lab.dev
 Categories:
 - CategoryName: Introduction
   Files:
