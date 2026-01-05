@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <!-- Google Fonts - Montserrat for headings -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Syntax Highlighting with Prism -->
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-csharp.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            background-color: #ededed;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            position: fixed;
+            height: 100vh;
+            width: 180px;
+            background-color: #242424;
+            color: white;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+            .sidebar li {
+                padding-left: 0px;
+                list-style-type: none;
+                transition: transform 0.3s ease;
+            }
+
+            .sidebar ul {
+                padding-left: 15px;
+            }
+
+            .sidebar a {
+                text-decoration: none;
+                color: white;
+            }
+
+            .sidebar li:hover {
+                transform: translateX(10px);
+            }
+
+        .content {
+            margin-left: 180px;
+            flex-grow: 1;
+            padding: 20px;
+            max-width: 70vw;
+            background-color: white;
+            box-sizing: border-box;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+                margin: 0;
+            }
+
+            .sidebar {
+                width: 100%;
+                position: relative;
+                height: auto;
+                max-height: none;
+            }
+
+            .content {
+                margin-left: 0;
+                width: 100%;
+                min-height: 100vh;
+                min-width: 100%;
+                padding: 10px;
+                background-color: white;
+                box-sizing: border-box;
+            }
+        }
+
+
+        /* CONTENT STYLING */
+        .content code {
+            background-color: #f4f4f4;
+            color: #3669eb;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        .content pre[class*="language-"] {
+            font-size: 0.9em;
+            line-height: 1.4em;
+        }
+
+        .content img {
+            height: auto;
+            max-width: 70%;
+            display: block;
+            margin: 10px 0;
+        }
+
+        /* Base table styling */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 16px 0;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        a {
+            color: #3669eb;
+        }
+
+
+        table th {
+            background-color: #f6f8fa;
+            border: 1px solid #d0d7de;
+            padding: 6px 13px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        table td {
+            border: 1px solid #d0d7de;
+            padding: 6px 13px;
+        }
+
+        /* Alternating row colors */
+        table tr:nth-child(even) {
+            background-color: #f6f8fa;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Overflow for small screens */
+        table {
+            display: block;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .content h1,
+        .content h2,
+        .content h3,
+        .content h4,
+        .content h5,
+        .content h6 {
+            font-family: 'Montserrat', sans-serif;
+            color: #222222;
+            margin-bottom: 0;
+            padding-bottom: 2px;
+        }
+
+        .content p,
+        .content ul,
+        .content ol,
+        .content pre {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        
+                <h4>INTRODUCTION</h4>
+                <ul>
+                    
+                        <li><a href="/Introduction/About.html">About</a></li>
+                        
+                        <li><a href="/Introduction/Portfolio.html">Portfolio</a></li>
+                        
+                </ul>
+                
+                <h4>WRITE-UPS</h4>
+                <ul>
+                    
+                        <li><a href="/Write-Ups/PushingInteroperabilityToItsLimits.html">Pushing Interoperability To Its Limits</a></li>
+                        
+                </ul>
+                
+    </div>
+
+    <div class="content">
+        <p>
+            <span style="color: #b8b8b8;">Site /</span>
+            <span style="color: #424242; font-weight: bold;">Introduction / Portfolio</span>
+        </p>
+<h2 id="markocoa">Markocoa</h2>
+<p>You can check the source code out <a href="https://github.com/Tweety-Lab/Markocoa">here</a></p>
+<p>A C# tool that allows users to turn markdown (<code>.md</code>) files into an entire website frontend. Uses YAML-Serialized projects to organise markdown files into clean, organized categories that utilize the extensive theme system to look and feel modern. (This site was made with it!)</p>
+<h3 id="features">Features</h3>
+<ul>
+<li>Code blocks &amp; syntax highlighting</li>
+<li>Extensive theming support via a text templating engine</li>
+<li>Mobile-friendly formatting</li>
+<li>Modern default theme</li>
+<li>Instant GitHub Pages deployment</li>
+</ul>
+<h2 id="tweetylang">TweetyLang</h2>
+<p>You can check the source code out <a href="https://github.com/TweetyLang/TweetyLang">here</a></p>
+<p>A native programming language designed around the philosophy of tools that <strong>Just Work</strong>. It aims to bridge the gap between the developer experience of a high-level language like C# and the control of low-level languages like C. It's design was influenced by the 4 major pillars of Developer Experience, Portability, Memory Safety, and Language Interoperability.</p>
+<p>If you're interested in the design behind TweetyLang, <strong>you can view the design specification</strong> <a href="https://tweetylang.github.io/Specification/">here</a></p>
+<p><img src="tweety-lang.png" alt="TweetyLang Source Code" /></p>
+<h2 id="atlas">Atlas</h2>
+<p>You can check the source code out <a href="https://github.com/Vista-Source/Atlas">here</a></p>
+<p>An in-house solution to C# Multi-Language source code generation that was used to automate the process of generating C++/C# Glue code for a Game Engine, Allowing native C++ classes to be used from within C# Entity scripts without developers needing to painfully write or maintain hundreds of lines of <a href="https://learn.microsoft.com/en-us/dotnet/standard/native-interop/pinvoke">P/Invoke</a> code.</p>
+<h2 id="source-csharp">Source-CSharp</h2>
+<p>You can check the source code out <a href="https://github.com/Tweety-Lab/source-csharp">here</a></p>
+<p>A Modified version of Valve's 2013 Source SDK that adds C# Scripting support via .NET 9.0.0. Runs C# Code from the C++ Engine through a modular &quot;Scripting Backend&quot; which defaults to a .NET Runtime Host system that allows for developing with absolutely any .NET and C# version.</p>
+<p><img src="source-cs.png" alt="C# Source Entity" /></p>
+<h2 id="source-engine-rewrite">Source Engine Rewrite</h2>
+<p>You can check the source code out <a href="https://github.com/Tweety-Lab/SourceRewrite">here</a></p>
+<p>A a semi-rewrite of Valve's 'Source Engine' in C#. It was designed to have the same workflow and structure as Source whilst drastically changing certain parts to be easier to use and remove various limitations of working with Source.</p>
+<p>As of the time of writing, it includes the following features:</p>
+<ul>
+<li>Web-Based VGui replacement: 'Vista GUI'</li>
+<li>Native C# Valve Format reading/writing</li>
+<li>Steam Game Mounting</li>
+<li>C# Entity API</li>
+<li>Extensive code/content modding system</li>
+<li>VPhysics Replacement via Bullet Physics</li>
+<li>Real-time Lighting</li>
+<li>Custom GLSL Preprocessor for simple Shader manipulation</li>
+<li>Source Engine's Input, Entity, Map IO, and File Systems all faithfully recreated in C#</li>
+</ul>
+<p><img src="hammer-map.png" alt="VMF Rendered in Hammer" />
+<img src="vmf-render-map.png" alt="VMF Rendered in SourceRewrite" /></p>
+<h2 id="netleaf">NetLeaf</h2>
+<p>You can check the source code out <a href="https://github.com/Tweety-Lab/NetLeaf">here</a></p>
+<p>A C++ Library that heavily simplifies the process of running/embedding C# in a C++ app. Uses a .NET Runtime Host to support any .NET/C# Version whilst also having a minimal performance decrease from a native C# process.</p>
+<p>Supports static methods, return values, arguments, class instances, and more.</p>
+<p><img src="netleaf.png" alt="NetLeaf Code" /></p>
+<h2 id="fractal">Fractal</h2>
+<p>You can check the game out <a href="https://store.steampowered.com/app/3484790/Fractal">here</a></p>
+<p>Currently working alongside the many talented people at Team Sawblade to bring this puzzle game about lasers to life. Mainly responsible for refactoring old code, writing the level editor, and implementing new gameplay features using C# and the Unity Game Engine.</p>
+<p><img src="fractal.png" alt="Fractal Screenshot" /></p>
+
+    </div>
+</body>
+</html>
