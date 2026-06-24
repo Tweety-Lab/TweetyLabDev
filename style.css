@@ -1,0 +1,234 @@
+:root {
+    --background: #0b0f14;
+    --surface: #111826;
+
+    --text: #e6edf3;
+    --muted: #9aa4b2;
+
+    --primary: #4cc9f0;
+    --primary-deep: #1d4ed8;
+
+    --accent: #ff7a3d;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 0.25rem;
+    font-size: 4rem;
+}
+
+p {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    max-width: 60ch;
+    font-size: 1.15rem;
+}
+
+h2 {
+    margin-top: 2rem;
+    margin-bottom: 0.25rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.15rem;
+    font-weight: 500;
+
+    color: var(--accent);
+    text-shadow:
+        0 0 4px rgba(240, 134, 20, 0.25),
+        0 0 10px rgba(255, 86, 19, 0.15);
+
+    letter-spacing: 0.5px;
+}
+
+.prompt {
+    color: var(--accent);
+    margin-right: 0.5rem;
+    text-shadow:
+        0 0 6px rgba(124, 255, 107, 0.4);
+}
+
+.cursor {
+    display: inline-block;
+    margin-left: 4px;
+    color: var(--accent);
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--muted);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: min(1100px, 92vw);
+    padding: 6rem 0;
+}
+
+h1 {
+    color: var(--text);
+}
+
+.chromatic {
+    display: inline-block;
+    animation: flicker 2.5s ease-in-out both;
+    color: var(--text);
+    text-shadow:
+        0 0 4px var(--primary),
+        0 0 10px var(--primary),
+        0 0 20px rgba(76, 201, 240, 0.6),
+        0 0 30px rgba(255, 122, 61, 0.4);
+}
+
+.project-strip {
+    display: flex;
+    width: max-content;
+    animation: scroll 30s linear infinite;
+    gap: 0.5rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 1rem 0;
+    scrollbar-width: none;
+}
+
+.project-strip::-webkit-scrollbar {
+    display: none;
+}
+
+.project-strip img {
+    display: block;
+    height: 300px;
+    width: auto;
+    object-fit: cover;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    filter: brightness(1.2);
+}
+
+.project {
+    border: 2px solid var(--surface);
+    transition: border-color 0.2s ease;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.project:hover {
+    border-color: var(--accent);
+}
+
+.project-info {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+}
+
+.project-title {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.project-desc {
+    font-size: 0.9rem;
+    opacity: 0.85;
+    margin-top: 0.4rem;
+}
+
+.project:hover .project-info {
+    opacity: 1;
+}
+
+.project-strip img:hover {
+    transform: scale(1.03);
+    filter: brightness(0.25);
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+h1 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+h1.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes flicker {
+    /* STARTUP KICK (dead → first spark) */
+    0% {
+        opacity: 0;
+        transform: translateY(-3px);
+        filter: none;
+    }
+
+    3% {
+        opacity: 0.1;
+        filter: drop-shadow(0 0 2px rgba(76, 201, 240, 0.2));
+    }
+
+    6% {
+        opacity: 0.4;
+        filter: drop-shadow(0 0 6px rgba(76, 201, 240, 0.35));
+    }
+
+    9% {
+        opacity: 0.15;
+    }
+
+    12% {
+        opacity: 0.9;
+        transform: translateY(0);
+        filter:
+            drop-shadow(0 0 10px rgba(76, 201, 240, 0.5))
+            drop-shadow(0 0 18px rgba(255, 122, 61, 0.25));
+    }
+
+    /* MAIN FLICKER CYCLE */
+    0%, 19.99%, 22%, 62.99%, 64%, 64.99%, 70%, 100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter:
+            drop-shadow(0 0 6px rgba(76, 201, 240, 0.6))
+            drop-shadow(0 0 18px rgba(76, 201, 240, 0.35))
+            drop-shadow(0 0 28px rgba(255, 122, 61, 0.25));
+    }
+
+    20%, 21.99%, 63%, 63.99%, 65%, 69.99% {
+        opacity: 0.25;
+        transform: translateY(-1px);
+        filter:
+            drop-shadow(0 0 2px rgba(76, 201, 240, 0.15))
+            drop-shadow(0 0 4px rgba(255, 122, 61, 0.1));
+    }
+}

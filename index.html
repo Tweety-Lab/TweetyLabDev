@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1>hey there, i'm <span class="chromatic">Tweety</span></h1>
+            <p>I write compilers, engines, and development tools. Typically with the goal of making life easier for other developers.</p>
+            <p>I'm currently tinkering with my programming language Loom and my Virtual Reality focused game engine Orama.</p>
+
+            <h2><span class="prompt">$</span> PROJECTS<span class="cursor">█</span></h2>
+
+            <div class="project-strip">
+                <a href="projects/tweety-lang/" class="project">
+                    <img src="projects/tweety-lang/thumb.png" alt="Tweety Lang">
+
+                    <div class="project-info">
+                        <div class="project-title">Tweety Lang</div>
+                        <div class="project-desc">Native programming language designed around the philosophy of tools that <b>Just Work</b>.</div>
+                    </div>
+                </a>
+
+                <a href="projects/source-csharp/" class="project">
+                    <img src="projects/source-csharp/thumb.png" alt="Source C#">
+
+                    <div class="project-info">
+                        <div class="project-title">Source C#</div>
+                        <div class="project-desc">Modified version of Valve's 2013 Source SDK that adds C# Scripting support.</div>
+                    </div>
+                </a>
+
+                <a href="projects/source-rewrite/" class="project">
+                    <img src="projects/source-rewrite/thumb.png" alt="Source Rewrite">
+
+                    <div class="project-info">
+                        <div class="project-title">Source Rewrite</div>
+                        <div class="project-desc">Semi-rewrite of Valve's 'Source Engine' in C#.</div>
+                    </div>
+                </a>
+
+                <a href="projects/netleaf/" class="project">
+                    <img src="projects/netleaf/thumb.png" alt="Net Leaf">
+
+                    <div class="project-info">
+                        <div class="project-title">NetLeaf</div>
+                        <div class="project-desc">C++ Library that heavily simplifies the process of running/embedding C# in a C++ app. Supports static methods, return values, arguments, class instances, and more.</div>
+                    </div>
+                </a>
+            </div>
+
+            <h2><span class="prompt">$</span> RECENT WRITING<span class="cursor">█</span></h2>
+
+            <h2><span class="prompt">$</span> CONTACT<span class="cursor">█</span></h2>
+            <p>I always love to talk & collaborate, so if you need me for anything you can reach out via email at <code>allie.g@tweety-lab.dev</code> or on Discord at <code>Allieum256</code>.</p>
+        </div>
+
+        <script>
+        const title = document.querySelector("h1");
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, { threshold: 0.6 });
+
+        observer.observe(title);
+        </script>
+    </body>
+</html>
