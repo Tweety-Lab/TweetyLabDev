@@ -31,7 +31,7 @@ p {
     font-size: 1.15rem;
 }
 
-h2 {
+.terminal-header {
     margin-top: 2rem;
     margin-bottom: 0.25rem;
     font-family: 'JetBrains Mono', monospace;
@@ -46,16 +46,17 @@ h2 {
     letter-spacing: 0.5px;
 }
 
-.prompt {
+.terminal-header::before {
+    content: "$";
+    margin-right: 1rem;
     color: var(--accent);
-    margin-right: 0.5rem;
-    text-shadow:
-        0 0 6px rgba(124, 255, 107, 0.4);
+    text-shadow: 0 0 6px rgba(124, 255, 107, 0.4);
 }
 
-.cursor {
+.terminal-header::after {
+    content: "█";
     display: inline-block;
-    margin-left: 4px;
+    margin-left: 6px;
     color: var(--accent);
     animation: blink 1s step-end infinite;
 }
