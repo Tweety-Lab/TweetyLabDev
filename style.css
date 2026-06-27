@@ -98,6 +98,28 @@ h1 {
         0 0 30px rgba(255, 122, 61, 0.4);
 }
 
+a {
+    color: var(--text);
+    text-decoration: underline;
+    transition: color 0.25s ease, text-shadow 0.25s ease;
+
+    text-shadow:
+        0 0 4px var(--primary),
+        0 0 10px var(--primary),
+        0 0 20px rgba(76, 201, 240, 0.6),
+        0 0 30px rgba(255, 122, 61, 0.4);
+}
+
+a:hover {
+    color: var(--accent);
+
+    text-shadow:
+        0 0 4px var(--accent),
+        0 0 10px var(--accent),
+        0 0 20px rgba(255, 122, 61, 0.6),
+        0 0 30px rgba(255, 180, 120, 0.5);
+}
+
 .project-strip {
     display: flex;
     width: max-content;
