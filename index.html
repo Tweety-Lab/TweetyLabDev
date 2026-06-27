@@ -15,43 +15,8 @@
 
             <h2 class="terminal-header">GALLERY</h2>
 
-            <div class="project-strip">
-                <a href="projects/tweety-lang/" class="project">
-                    <img src="projects/tweety-lang/thumb.png" alt="Tweety Lang">
-
-                    <div class="project-info">
-                        <div class="project-title">Tweety Lang</div>
-                        <div class="project-desc">Native programming language designed around the philosophy of tools that <b>Just Work</b>.</div>
-                    </div>
-                </a>
-
-                <a href="projects/source-csharp/" class="project">
-                    <img src="projects/source-csharp/thumb.png" alt="Source C#">
-
-                    <div class="project-info">
-                        <div class="project-title">Source C#</div>
-                        <div class="project-desc">Modified version of Valve's 2013 Source SDK that adds C# Scripting support.</div>
-                    </div>
-                </a>
-
-                <a href="projects/source-rewrite/" class="project">
-                    <img src="projects/source-rewrite/thumb.png" alt="Source Rewrite">
-
-                    <div class="project-info">
-                        <div class="project-title">Source Rewrite</div>
-                        <div class="project-desc">Semi-rewrite of Valve's 'Source Engine' in C#.</div>
-                    </div>
-                </a>
-
-                <a href="projects/netleaf/" class="project">
-                    <img src="projects/netleaf/thumb.png" alt="Net Leaf">
-
-                    <div class="project-info">
-                        <div class="project-title">NetLeaf</div>
-                        <div class="project-desc">C++ Library that heavily simplifies the process of running/embedding C# in a C++ app. Supports static methods, return values, arguments, class instances, and more.</div>
-                    </div>
-                </a>
-            </div>
+            <!-- This is programmatically filled -->
+            <div class="project-strip" id="project-strip"></div>
             <p>Interested in what you see? Check out my <a href="portfolio">Portfolio</a>.</p>
 
             <h2 class="terminal-header">RECENT WRITING</h2>
@@ -60,7 +25,27 @@
             <p>I always love to talk & collaborate, so if you need me for anything you can reach out via email at <code>allie.g@tweety-lab.dev</code> or on Discord at <code>Allieum256</code>.</p>
         </div>
 
-        <script>
+        <script type="module">
+        import { projects } from "./portfolio-metadata.js";
+
+        const strip = document.getElementById("project-strip");
+
+        for (const project of projects) {
+            strip.insertAdjacentHTML("beforeend", `
+                <a href="projects/${project.id}/" class="project">
+                    <img
+                        src="${project.thumbnail}"
+                        alt="${project.title}"
+                    >
+
+                    <div class="project-info">
+                        <div class="project-title">${project.title}</div>
+                        <div class="project-desc">${project.description}</div>
+                    </div>
+                </a>
+            `);
+        }
+
         const title = document.querySelector("h1");
 
         const observer = new IntersectionObserver(entries => {
