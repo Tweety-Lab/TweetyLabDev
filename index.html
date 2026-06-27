@@ -22,6 +22,7 @@
             <p>Interested in what you see? Check out my <a href="portfolio">Portfolio</a>.</p>
 
             <h2 class="terminal-header">RECENT WRITING</h2>
+            <div id="article-list"></div>
 
             <h2 class="terminal-header">CONTACT</h2>
             <p>I always love to talk & collaborate, so if you need me for anything you can reach out via email at <code>allie.g@tweety-lab.dev</code> or on Discord at <code>Allieum256</code>.</p>
@@ -29,6 +30,7 @@
 
         <script type="module">
         import { projects } from "/portfolio-metadata.js";
+        import { articles } from "/article-metadata.js";
 
         const strip = document.getElementById("project-strip");
 
@@ -43,6 +45,20 @@
                     <div class="project-info">
                         <div class="project-title">${project.title}</div>
                         <div class="project-desc">${project.tagline}</div>
+                    </div>
+                </a>
+            `);
+        }
+
+        const articleList = document.getElementById("article-list");
+
+        for (const article of articles) {
+            articleList.insertAdjacentHTML("beforeend", `
+                <a class="article-entry" href="/writing/${article.id}">
+                    <div class="article-title">${article.title}</div>
+
+                    <div class="article-tags">
+                        ${article.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}
                     </div>
                 </a>
             `);

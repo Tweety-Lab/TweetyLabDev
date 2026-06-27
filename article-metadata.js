@@ -1,7 +1,13 @@
 // Metadata about all available articles
 export const articles = [
     {
-        id: "cs-headers",
-        title: "Pushing Interoperability To Its (Almost) Limits"
-    }
+        id: "cpp-modules",
+        title: "C++ Modules & how they (almost) make C++ less awful.",
+        tags: ["C++", "Complaining"],
+    },
+    {
+        id: "sbox-unity",
+        title: "S&Box Rad, Unity Bad.",
+        tags: ["C#"],
+    },
 ]
