@@ -10,21 +10,28 @@
     margin: 0;
 }
 
-.github-link {
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
     margin-left: auto;
+}
+
+.icon-link {
     display: flex;
     align-items: center;
     justify-content: center;
 
     color: var(--muted);
-    transition: color 0.2s ease, transform 0.2s ease;
+    transition: color 0.2s ease;
 }
 
-.github-link:hover {
+.icon-link:hover {
     color: var(--accent);
 }
 
-.github-link svg {
-    width: 1.4rem;
-    height: 1.4rem;
+.icon-link svg {
+    width: 1.3rem;
+    height: 1.3rem;
+    display: block;
 }
