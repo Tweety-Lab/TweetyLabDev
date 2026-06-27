@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+
+            <h1>Portfolio</h1>
+            <p>I do a lot of things, here's a collection of them!</p>
+
+            <!-- This is programmatically filled -->
+            <div id="project-list"></div>
+        </div>
+
+        <script type="module">
+        import { projects } from "../portfolio-metadata.js";
+
+        const list = document.getElementById("project-list");
+
+        for (const project of projects) {
+            list.insertAdjacentHTML("beforeend", `
+                <h2 class="terminal-header" id="${project.id}">${project.title}</h2>
+                <p>${project.body}</p>
+            `);
+        }
+
+        const title = document.querySelector("h1");
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, { threshold: 0.6 });
+
+        observer.observe(title);
+        </script>
+    </body>
+</html>

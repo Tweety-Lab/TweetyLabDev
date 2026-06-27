@@ -32,7 +32,7 @@
 
         for (const project of projects) {
             strip.insertAdjacentHTML("beforeend", `
-                <a href="projects/${project.id}/" class="project">
+                <a href="portfolio#${project.id}" class="project">
                     <img
                         src="${project.thumbnail}"
                         alt="${project.title}"
@@ -40,7 +40,7 @@
 
                     <div class="project-info">
                         <div class="project-title">${project.title}</div>
-                        <div class="project-desc">${project.description}</div>
+                        <div class="project-desc">${project.tagline}</div>
                     </div>
                 </a>
             `);
