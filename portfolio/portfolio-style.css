@@ -1,0 +1,30 @@
+/* This is all kinda hacky */
+
+.project-header {
+    display: flex;
+    align-items: center;
+    max-width: 680px;
+}
+
+.project-header .terminal-header {
+    margin: 0;
+}
+
+.github-link {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--muted);
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.github-link:hover {
+    color: var(--accent);
+}
+
+.github-link svg {
+    width: 1.4rem;
+    height: 1.4rem;
+}
