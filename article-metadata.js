@@ -8,6 +8,6 @@ export const articles = [
     {
         id: "sbox-unity",
         title: "S&Box Rad, Unity Bad.",
-        tags: ["C#"],
+        tags: ["C#", "Complaining"],
     },
 ]
