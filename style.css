@@ -280,6 +280,20 @@ h1.visible {
     justify-content: flex-start;
 }
 
+.nav-logo img {
+    margin-right: 0.5rem;
+    width: 48px;
+    height: 48px;
+    image-rendering: auto;
+    display: block;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.nav-logo:hover img {
+    transform: scale(1.08);
+    filter: brightness(1.2);
+}
+
 .nav-links {
     display: flex;
     gap: 2rem;
