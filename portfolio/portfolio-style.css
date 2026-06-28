@@ -35,3 +35,22 @@
     height: 1.3rem;
     display: block;
 }
+
+.project-thumbnail {
+    max-height: 280px;
+    object-fit: contain;
+    background: var(--surface);
+    border: 2px solid var(--surface);
+    filter: brightness(1.1);
+    margin-bottom: 0.75rem;
+    transition: border-color 0.2s ease;
+    display: block;
+}
+
+.project-thumbnail:hover {
+    border-color: var(--accent);
+}
+
+.project-entry p {
+    margin-top: 0;
+}
