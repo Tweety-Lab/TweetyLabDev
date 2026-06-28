@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TweetyLab</title>
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <script type="module" src="navbar.js"></script>
+        <div id="navbar"></div>
+        <div class="container">
+            <h1>hey there, i'm <span class="chromatic">Tweety</span></h1>
+            <p>I write compilers, engines, and development tools. Typically with the goal of making life easier for other developers.</p>
+            <p>I'm currently tinkering with my programming language Loom and my Virtual Reality focused game engine Orama.</p>
+
+            <h2 class="terminal-header">GALLERY</h2>
+
+            <!-- This is programmatically filled -->
+            <div class="project-strip-wrapper">
+                <div class="project-strip" id="project-strip"></div>
+            </div>
+            <p>Interested in what you see? Check out my <a href="portfolio">Portfolio</a>.</p>
+
+            <h2 class="terminal-header">RECENT WRITING</h2>
+            <div id="article-list"></div>
+
+            <h2 class="terminal-header">CONTACT</h2>
+            <p>I always love to talk & collaborate, so if you need me for anything you can reach out via email at <code>allie.g@tweety-lab.dev</code> or on Discord at <code>Allieum256</code>.</p>
+        </div>
+
+        <script type="module">
+        import { projects } from "/portfolio-metadata.js";
+        import { articles } from "/article-metadata.js";
+
+        const strip = document.getElementById("project-strip");
+
+        for (const project of projects) {
+            strip.insertAdjacentHTML("beforeend", `
+                <a href="portfolio#${project.id}" class="project">
+                    <img
+                        src="${project.thumbnail}"
+                        alt="${project.title}"
+                    >
+
+                    <div class="project-info">
+                        <div class="project-title">${project.title}</div>
+                        <div class="project-desc">${project.tagline}</div>
+                    </div>
+                </a>
+            `);
+        }
+
+        for (const child of [...strip.children]) {
+            strip.appendChild(child.cloneNode(true));
+        }
+
+        const articleList = document.getElementById("article-list");
+
+        for (const article of articles) {
+            articleList.insertAdjacentHTML("beforeend", `
+                <a class="article-entry" href="/writing/${article.id}">
+                    <div class="article-title">${article.title}</div>
+
+                    <div class="article-tags">
+                        ${article.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}
+                    </div>
+                </a>
+            `);
+        }
+
+        const title = document.querySelector("h1");
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, { threshold: 0.6 });
+
+        observer.observe(title);
+        </script>
+    </body>
+</html>

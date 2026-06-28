@@ -1,0 +1,56 @@
+/* This is all kinda hacky */
+
+.project-header {
+    display: flex;
+    align-items: center;
+    max-width: 680px;
+}
+
+.project-header .terminal-header {
+    margin: 0;
+}
+
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-left: auto;
+}
+
+.icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--muted);
+    transition: color 0.2s ease;
+}
+
+.icon-link:hover {
+    color: var(--accent);
+}
+
+.icon-link svg {
+    width: 1.3rem;
+    height: 1.3rem;
+    display: block;
+}
+
+.project-thumbnail {
+    max-height: 280px;
+    object-fit: contain;
+    background: var(--surface);
+    border: 2px solid var(--surface);
+    filter: brightness(1.1);
+    margin-bottom: 0.75rem;
+    transition: border-color 0.2s ease;
+    display: block;
+}
+
+.project-thumbnail:hover {
+    border-color: var(--accent);
+}
+
+.project-entry p {
+    margin-top: 0;
+}

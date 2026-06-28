@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TweetyLab - Blog</title>
+        <link rel="stylesheet" href="/style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="navbar"></div>
+        <div class="container">
+
+            <h1>Blog</h1>
+            <p>I write about nerdy things.</p>
+
+            <!-- This is programmatically filled -->
+            <div id="article-list"></div>
+        </div>
+
+        <script type="module" src="/navbar.js"></script>
+        <script type="module">
+        import { articles } from "/article-metadata.js";
+
+        const list = document.getElementById("article-list");
+
+        for (const article of articles) {
+            list.insertAdjacentHTML("beforeend", `
+                <a class="article-entry" href="/blog/${article.id}">
+                    <div class="article-title">${article.title}</div>
+
+                    <div class="article-tags">
+                        ${article.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}
+                    </div>
+                </a>
+            `);
+        }
+
+        const title = document.querySelector("h1");
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, { threshold: 0.6 });
+
+        observer.observe(title);
+        </script>
+    </body>
+</html>
