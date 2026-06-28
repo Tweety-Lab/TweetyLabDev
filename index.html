@@ -37,7 +37,7 @@
 
         const strip = document.getElementById("project-strip");
 
-        for (const project of projects) {
+        for (const project of projects.filter(project => project.thumbnail)) {
             strip.insertAdjacentHTML("beforeend", `
                 <a href="portfolio#${project.id}" class="project">
                     <img

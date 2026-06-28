@@ -75,9 +75,18 @@ const steamIcon = `
                         </div>
                     </div>
 
-                    <a href="/${project.thumbnail}" target="_blank" rel="noopener noreferrer">
-                        <img class="project-thumbnail" src="/${project.thumbnail}" alt="${project.title}">
-                    </a>
+                    ${
+                        project.thumbnail
+                            ? `
+                            <a href="/${project.thumbnail}" target="_blank" rel="noopener noreferrer">
+                                <img
+                                    class="project-thumbnail"
+                                    src="/${project.thumbnail}"
+                                    alt="${project.title}">
+                            </a>
+                            `
+                            : ""
+                    }
                     <p>${project.body}</p>
                 </article>
                 <br>

@@ -1,6 +1,20 @@
 // Metadata about all Portfolio projects
 export const projects = [
     {
+        id: "orama",
+        title: "Orama Engine",
+        github: "https://github.com/Orama-Engine/Orama",
+        tagline: "Virtual-Reality focused Game Engine written in .NET 10 using the most modern features of C#.",
+        body: "A Virtual-Reality focused Game Engine written in .NET 10 using the most modern features of C#. It runs off a descriptor defined Vulkan-first rendering engine, custom Shader language, an extremely modular architecture, and my own take on the modern Entity system.",
+    },
+    {
+        id: "loom",
+        title: "Loom",
+        github: "https://github.com/Tweety-Lab/Loom",
+        tagline: "Memory safe, C# inspired programming language.",
+        body: "A memory safe, C# inspired programming language that was the evolution of my previous language project TweetyLang. Loom's defined by it's clean compiler architecture and deep semantic integration of C++ inspired smart pointers.",
+    },
+    {
         id: "source-csharp",
         title: "Source C#",
         github: "https://github.com/Tweety-Lab/Source-CSharp",
@@ -30,7 +44,7 @@ export const projects = [
         github: "https://github.com/Tweety-Lab/SourceRewrite",
         thumbnail: "thumbs/source-rewrite.png",
         tagline: "Semi-rewrite of Valve's Source Engine in C#.",
-        body: "A semi-rewrite of Valve's 'Source Engine' in C#. It was designed to have the same workflow and structure as Source whilst drastically changing certain parts to be easier to use and remove various limitations of working with Source. As of the time of writing, it includes the following features:",
+        body: "A semi-rewrite of Valve's 'Source Engine' in C#. It was designed to have the same workflow and structure as Source whilst drastically changing certain parts to be easier to use and remove various limitations of working with Source.",
     },
     {
         id: "netleaf",
@@ -39,5 +53,19 @@ export const projects = [
         thumbnail: "thumbs/netleaf.png",
         tagline: "C++ library that simplifies embedding C# into native applications.",
         body: "A C++ Library that heavily simplifies the process of running/embedding C# in a C++ app. Uses a .NET Runtime Host to support any .NET/C# Version whilst also having a minimal performance decrease from a native C# process. Supports static methods, return values, arguments, class instances, and more.",
-    }
+    },
+    {
+        id: "aperture",
+        title: "Aperture",
+        github: "https://github.com/Vista-Source/Aperture",
+        tagline: "xUnit extension for testing parity between C# and C++ modules.",
+        body: "An xUnit extension for testing parity between C# and C++ modules. It was written to assist a team rewriting Valve's C++-Based 'Source Engine' in C# and uses VTable hooking to solve the issue of calling into C++ classes from C# without changing any underlying code.",
+    },
+    {
+        id: "markocoa",
+        title: "Markocoa",
+        github: "https://github.com/Tweety-Lab/Markocoa",
+        tagline: "C# Tool for generating lightweight static websites from MarkDown files.",
+        body: "A C# static site generator that utilizes markdown files to create lightweight, customizable websites similar to tools like Hugo, Jekyll, and others.",
+    },
 ];
