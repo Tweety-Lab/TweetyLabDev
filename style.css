@@ -223,7 +223,6 @@ h1.visible {
 }
 
 @keyframes flicker {
-    /* STARTUP KICK (dead → first spark) */
     0% {
         opacity: 0;
         transform: translateY(-3px);
