@@ -18,7 +18,9 @@
             <h2 class="terminal-header">GALLERY</h2>
 
             <!-- This is programmatically filled -->
-            <div class="project-strip" id="project-strip"></div>
+            <div class="project-strip-wrapper">
+                <div class="project-strip" id="project-strip"></div>
+            </div>
             <p>Interested in what you see? Check out my <a href="portfolio">Portfolio</a>.</p>
 
             <h2 class="terminal-header">RECENT WRITING</h2>
@@ -48,6 +50,10 @@
                     </div>
                 </a>
             `);
+        }
+
+        for (const child of [...strip.children]) {
+            strip.appendChild(child.cloneNode(true));
         }
 
         const articleList = document.getElementById("article-list");

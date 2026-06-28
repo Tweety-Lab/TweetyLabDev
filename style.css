@@ -119,10 +119,16 @@ a:hover {
         0 0 30px rgba(255, 180, 120, 0.5);
 }
 
+.project-strip-wrapper {
+    overflow: hidden;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+}
+
 .project-strip {
     display: flex;
     width: max-content;
-    animation: scroll 30s linear infinite;
+    animation: scroll 80s linear infinite;
     gap: 0.5rem;
     overflow-x: auto;
     overflow-y: hidden;
