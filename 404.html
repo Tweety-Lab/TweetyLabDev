@@ -7,13 +7,39 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+        <style>
+            .error-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                min-height: 60vh;
+                gap: 0.5rem;
+            }
+
+            .error-icon {
+                width: 128px;
+                height: 128px;
+                filter: grayscale(100%);
+                margin-bottom: 1rem;
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+        </style>
     </head>
     <body>
         <script type="module" src="/navbar.js"></script>
         <div id="navbar"></div>
         <div class="container">
-            <p>404.</p>
-            <p>Sorry! That page seems to be under construction.</p>
+            <div class="error-container">
+                <img src="/android-chrome-192x192.png" alt="TweetyLab logo" class="error-icon">
+                <p><b>404.</b></p>
+                <p>Sorry! This page is currently undergoing maintenance.</p>
+            </div>
         </div>
     </body>
 </html>
