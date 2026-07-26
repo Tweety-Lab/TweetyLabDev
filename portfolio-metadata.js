@@ -1,11 +1,11 @@
 // Metadata about all Portfolio projects
 export const projects = [
     {
-        id: "orama",
-        title: "Orama Engine",
-        github: "https://github.com/Orama-Engine/Orama",
-        tagline: "Virtual-Reality focused Game Engine written in .NET 10 using the most modern features of C#.",
-        body: "A Virtual-Reality focused Game Engine written in .NET 10 using the most modern features of C#. It runs off a descriptor defined Vulkan-first rendering engine, custom Shader language, an extremely modular architecture, and my own take on the modern Entity system.",
+        id: "beryl",
+        title: "Beryl Engine",
+        github: "https://github.com/Beryl-Engine/Beryl",
+        tagline: "MIT Game Engine written in .NET 10 using the most modern features of C#.",
+        body: "A MIT Game Engine written in .NET 10 using the most modern features of C#. It runs off a descriptor defined Vulkan-first rendering engine, custom Shader language, an extremely modular architecture, and my own take on the modern Entity system.",
     },
     {
         id: "loom",
