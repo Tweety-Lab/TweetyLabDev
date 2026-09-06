@@ -4,6 +4,7 @@ export const projects = [
         id: "beryl",
         title: "Beryl Engine",
         github: "https://github.com/Beryl-Engine/Beryl",
+        thumbnail: "thumbs/beryl.gif",
         tagline: "MIT Game Engine written in .NET 10 using the most modern features of C#.",
         body: "A MIT Game Engine written in .NET 10 using the most modern features of C#. It runs off a descriptor defined Vulkan-first rendering engine, custom Shader language, an extremely modular architecture, and my own take on the modern Entity system.",
     },
