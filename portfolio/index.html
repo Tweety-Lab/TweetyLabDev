@@ -40,6 +40,13 @@ const steamIcon = `
 </svg>
 `;
 
+const wikiIcon = `
+<svg viewBox="0 0 24 24" aria-hidden="true">
+    <path fill="currentColor"
+        d="M6 2h9l5 5v15H6c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2Zm8 1.5V8h4.5L14 3.5ZM7 11v1.5h10V11H7Zm0 3v1.5h7V14H7Zm0 3v1.5h10V17H7Z"/>
+</svg>
+`;
+
         for (const project of projects) {
             list.insertAdjacentHTML("beforeend", `
                 <article class="project-entry">
@@ -69,6 +76,18 @@ const steamIcon = `
                                         rel="noopener noreferrer"
                                         aria-label="Steam page">
                                         ${steamIcon}
+                                    </a>`
+                                    : ""
+                            }
+
+                            ${
+                                project.wiki
+                                    ? `<a class="icon-link"
+                                        href="${project.wiki}"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Wiki Site">
+                                        ${wikiIcon}
                                     </a>`
                                     : ""
                             }
