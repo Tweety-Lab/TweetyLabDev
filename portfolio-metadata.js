@@ -13,6 +13,7 @@ export const projects = [
         id: "loom",
         title: "Loom",
         github: "https://github.com/Tweety-Lab/Loom",
+        thumbnail: "thumbs/loom.png",
         tagline: "Memory safe, C# inspired programming language.",
         body: "A memory safe, C# inspired programming language that was the evolution of my previous language project TweetyLang. Loom's defined by it's clean compiler architecture and deep semantic integration of C++ inspired smart pointers.",
     },
